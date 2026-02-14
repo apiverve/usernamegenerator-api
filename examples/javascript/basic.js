@@ -13,13 +13,7 @@ const API_URL = 'https://api.apiverve.com/v1/usernamegenerator';
  */
 async function callUsernameGeneratorAPI() {
   try {
-    // Query parameters
-    const params &#x3D; new URLSearchParams({
-            email: &#x27;sean@mail.com&#x27;,
-            count: 10
-        });
-
-    const response = await fetch(`${API_URL}?${params}`, {
+    const response = await fetch(API_URL, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
