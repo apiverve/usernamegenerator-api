@@ -1,40 +1,41 @@
 openapi: 3.0.4
 info:
   title: Username Generator
-  description: Username Generator is a simple tool for generating usernames. It returns a list of usernames based on the specified criteria.
+  description: >-
+    Username Generator is a simple tool for generating usernames. It returns a
+    list of usernames based on the specified criteria.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/usernamegenerator:
     get:
       summary: Generate Usernames using Email
-      description: Username Generator is a simple tool for generating usernames. It returns a list of usernames based on the specified criteria.
+      description: Generate usernames based on the specified criteria
       operationId: usernamegenerator
       parameters:
-      - name: email
-        in: query
-        schema:
-          type: string
-        required: true
-        description: The email address to generate usernames from
-        example: sean@mail.com
-      - name: count
-        default: '1'
-        in: query
-        schema:
-          type: integer
-        required: false
-        description: The number of usernames to generate
-        example: '10'
+        - name: email
+          in: query
+          schema:
+            type: string
+          required: true
+          description: The email address to generate usernames from
+          example: sean@mail.com
+        - name: count
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: The number of usernames to generate
+          example: 10
       responses:
         '200':
           description: Successful Response
@@ -50,31 +51,31 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   count: 10
                   suggestions:
-                  - sean
-                  - seanforlet
-                  - seanyawweed
-                  - adjunctivesean
-                  - seanuncanonize
-                  - seanredisburse
-                  - registrarshipsean
-                  - seansnobbism
-                  - pluralizersean
-                  - pupillaritysean
+                    - doxologysean
+                    - sean
+                    - downpoursean
+                    - tonsilarsean
+                    - interdependencysean
+                    - seantrivant
+                    - seansquireen
+                    - seankillifish
+                    - seantiltyard
+                    - seaninterrupt
                   email: sean@mail.com
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -82,4 +83,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
