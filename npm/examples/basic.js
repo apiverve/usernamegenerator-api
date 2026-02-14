@@ -16,7 +16,7 @@ const api = new usernamegeneratorAPI({
 // Example query
 var query = {
   email: "sean@mail.com",
-  count: 10
+  count: 1
 };
 
 // Make the API request using callback
