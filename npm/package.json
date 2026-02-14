@@ -1,9 +1,18 @@
 {
   "name": "@apiverve/usernamegenerator",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "description": "Username Generator is a simple tool for generating usernames. It returns a list of usernames based on the specified criteria.",
   "main": "index.js",
   "types": "index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "mocha",
     "example": "node examples/basic.js"
@@ -14,14 +23,18 @@
     "directory": "npm"
   },
   "keywords": [
-    "username generator", "username generator api", "username generator tool", "username generator software", "username generator service"
+    ""
   ],
-  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "author": {
+    "name": "APIVerve",
+    "email": "hello@apiverve.com",
+    "url": "https://apiverve.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/apiverve/usernamegenerator-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/usernamegenerator?utm_source=npm",
+  "homepage": "https://usernamegenerator.apiverve.com?utm_source=npm&utm_medium=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
