@@ -12,14 +12,12 @@ namespace APIVerve.API.UsernameGenerator
     {
         /// <summary>
         /// The email address to generate usernames from
-        /// Example: sean@mail.com
         /// </summary>
         [JsonProperty("email")]
         public string Email { get; set; }
 
         /// <summary>
         /// The number of usernames to generate
-        /// Example: 10
         /// </summary>
         [JsonProperty("count")]
         public string Count { get; set; }
