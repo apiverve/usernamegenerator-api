@@ -44,7 +44,10 @@ from apiverve_usernamegenerator.apiClient import UsernamegeneratorAPIClient
 # Initialize the client with your APIVerve API key
 api = UsernamegeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "email": "sean@mail.com", "count": 1 }
+query = {
+    "email": "sean@mail.com",
+    "count": 1
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "email": "sean@mail.com", "count": 1 }
+query = {
+    "email": "sean@mail.com",
+    "count": 1
+}
 ```
 
 ###### Simple Request
@@ -133,7 +139,10 @@ from apiverve_usernamegenerator.apiClient import UsernamegeneratorAPIClient, Use
 
 api = UsernamegeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "email": "sean@mail.com", "count": 1 }
+query = {
+    "email": "sean@mail.com",
+    "count": 1
+}
 
 try:
     result = api.execute(query)
@@ -154,7 +163,10 @@ from apiverve_usernamegenerator.apiClient import UsernamegeneratorAPIClient, Use
 
 api = UsernamegeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "email": "sean@mail.com", "count": 1 }
+query = {
+    "email": "sean@mail.com",
+    "count": 1
+}
 
 try:
     result = api.execute(query)
@@ -188,7 +200,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_usernamegenerator.apiClient import UsernamegeneratorAPIClient, UsernamegeneratorAPIClientError
 
-query = { "email": "sean@mail.com", "count": 1 }
+query = {
+    "email": "sean@mail.com",
+    "count": 1
+}
 
 # Using context manager ensures proper cleanup
 with UsernamegeneratorAPIClient("[YOUR_API_KEY]") as api:
@@ -214,7 +229,10 @@ from apiverve_usernamegenerator.apiClient import UsernamegeneratorAPIClient
 # Enable debug mode
 api = UsernamegeneratorAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "email": "sean@mail.com", "count": 1 }
+query = {
+    "email": "sean@mail.com",
+    "count": 1
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -229,8 +247,12 @@ from apiverve_usernamegenerator.apiClient import UsernamegeneratorAPIClient
 
 api = UsernamegeneratorAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "email": "sean@mail.com",
+    "count": 1
+}
+
 try:
-    query = { "email": "sean@mail.com", "count": 1 }
     result = api.execute(query)
     print(result)
 finally:
