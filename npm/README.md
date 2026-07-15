@@ -127,16 +127,16 @@ async function makeRequest() {
   "data": {
     "count": 10,
     "suggestions": [
+      "doxologysean",
       "sean",
-      "seanforlet",
-      "seanyawweed",
-      "adjunctivesean",
-      "seanuncanonize",
-      "seanredisburse",
-      "registrarshipsean",
-      "seansnobbism",
-      "pluralizersean",
-      "pupillaritysean"
+      "downpoursean",
+      "tonsilarsean",
+      "interdependencysean",
+      "seantrivant",
+      "seansquireen",
+      "seankillifish",
+      "seantiltyard",
+      "seaninterrupt"
     ],
     "email": "sean@mail.com"
   }
