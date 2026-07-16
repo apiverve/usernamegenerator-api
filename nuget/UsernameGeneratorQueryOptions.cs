@@ -20,6 +20,6 @@ namespace APIVerve.API.UsernameGenerator
         /// The number of usernames to generate
         /// </summary>
         [JsonProperty("count")]
-        public string Count { get; set; }
+        public int? Count { get; set; }
     }
 }
