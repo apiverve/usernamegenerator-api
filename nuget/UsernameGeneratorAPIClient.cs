@@ -68,7 +68,7 @@ namespace APIVerve.API.UsernameGenerator
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
             { "email", new ValidationRule { Type = "string", Required = true, Format = "email" } },
-            { "count", new ValidationRule { Type = "integer", Required = false, Min = 1, Max = 100 } }
+            { "count", new ValidationRule { Type = "integer", Required = false, Min = 1, Max = 10 } }
         };
 
         /// <summary>Format validation patterns</summary>
