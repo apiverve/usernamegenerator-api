@@ -30,7 +30,7 @@ class usernamegeneratorWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/usernamegenerator';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"email":{"type":"string","required":true,"format":"email"},"count":{"type":"integer","required":false,"min":1,"max":100,"default":1}};
+        this.validationRules = {"email":{"type":"string","required":true,"format":"email"},"count":{"type":"integer","required":false,"min":1,"max":10,"default":1}};
     }
 
     /**
