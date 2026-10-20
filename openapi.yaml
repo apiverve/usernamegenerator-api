@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: Username Generator
   description: >-
-    Username Generator is a simple tool for generating usernames. It returns a
-    list of usernames based on the specified criteria.
+    Username Generator creates handle suggestions from a person's name or email
+    address. It returns an array of suggested usernames based on the input,
+    while paid plans can request multiple options at once.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/usernamegenerator:
     get:
-      summary: Generate Usernames using Email
+      summary: Username Generator
       description: Generate usernames based on the specified criteria
       operationId: usernamegenerator
       parameters:
