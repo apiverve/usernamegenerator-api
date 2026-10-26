@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/usernamegenerator",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Username Generator creates handle suggestions from a person's name or email address. It returns an array of suggested usernames based on the input, while paid plans can request multiple options at once.",
   "main": "index.js",
   "types": "index.d.ts",
