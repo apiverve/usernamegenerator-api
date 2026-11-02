@@ -58,7 +58,9 @@ Using the API is simple. All you have to do is make a request. The API will retu
 ```javascript
 var query = {
   email: "sean@mail.com",
-  count: 1
+  count: 1,
+  platform: "twitter",
+  maxLength: 15
 };
 
 api.execute(query, function (error, data) {
@@ -79,7 +81,9 @@ You can also use promises to make requests. The API returns a promise that you c
 ```javascript
 var query = {
   email: "sean@mail.com",
-  count: 1
+  count: 1,
+  platform: "twitter",
+  maxLength: 15
 };
 
 api.execute(query)
@@ -101,7 +105,9 @@ You can also use async/await to make requests. The API returns a promise that yo
 async function makeRequest() {
     var query = {
   email: "sean@mail.com",
-  count: 1
+  count: 1,
+  platform: "twitter",
+  maxLength: 15
 };
 
     try {
@@ -124,18 +130,20 @@ async function makeRequest() {
   "data": {
     "count": 10,
     "suggestions": [
-      "doxologysean",
-      "sean",
-      "downpoursean",
-      "tonsilarsean",
-      "interdependencysean",
-      "seantrivant",
-      "seansquireen",
-      "seankillifish",
-      "seantiltyard",
-      "seaninterrupt"
+      "smoothsean",
+      "sean-blade",
+      "infinitesean",
+      "jadesean",
+      "sean777",
+      "hiddensean23",
+      "seantv596",
+      "sean_brightdragon",
+      "shiningsean",
+      "the_sean"
     ],
-    "email": "sean@mail.com"
+    "email": "sean@mail.com",
+    "platform": null,
+    "maxLength": null
   }
 }
 ```

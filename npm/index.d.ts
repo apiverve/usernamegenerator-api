@@ -28,6 +28,8 @@ declare module '@apiverve/usernamegenerator' {
       count:       number | null;
       suggestions: (null | string)[];
       email:       null | string;
+      platform:    null;
+      maxLength:   null;
   }
 
   export default class usernamegeneratorWrapper {

@@ -16,7 +16,9 @@ const api = new usernamegeneratorAPI({
 // Example query
 var query = {
   email: "sean@mail.com",
-  count: 1
+  count: 1,
+  platform: "twitter",
+  maxLength: 15
 };
 
 // Make the API request using callback
