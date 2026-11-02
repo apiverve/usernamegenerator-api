@@ -37,6 +37,22 @@ paths:
           required: false
           description: The number of usernames to generate
           example: 10
+        - name: platform
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Only suggest handles this platform accepts (length and characters)
+          example: twitter
+        - name: maxLength
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: >-
+            Longest handle to suggest (3 to 50); combined with platform, the
+            shorter limit wins
+          example: 15
       responses:
         '200':
           description: Successful Response
@@ -60,17 +76,19 @@ paths:
                 data:
                   count: 10
                   suggestions:
-                    - doxologysean
-                    - sean
-                    - downpoursean
-                    - tonsilarsean
-                    - interdependencysean
-                    - seantrivant
-                    - seansquireen
-                    - seankillifish
-                    - seantiltyard
-                    - seaninterrupt
+                    - smoothsean
+                    - sean-blade
+                    - infinitesean
+                    - jadesean
+                    - sean777
+                    - hiddensean23
+                    - seantv596
+                    - sean_brightdragon
+                    - shiningsean
+                    - the_sean
                   email: sean@mail.com
+                  platform: null
+                  maxLength: null
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':

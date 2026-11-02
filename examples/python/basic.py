@@ -18,7 +18,7 @@ def call_usernamegenerator_api():
     """
     try:
         # Query parameters
-        params &#x3D; {&#x27;email&#x27;: &#x27;sean@mail.com&#x27;}
+        params &#x3D; {&#x27;email&#x27;: &#x27;sean@mail.com&#x27;, &#x27;platform&#x27;: &#x27;twitter&#x27;, &#x27;maxLength&#x27;: 15}
 
         headers = {
             'x-api-key': API_KEY

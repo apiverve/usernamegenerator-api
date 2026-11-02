@@ -15,7 +15,9 @@ async function callUsernameGeneratorAPI() {
   try {
     // Query parameters
     const params &#x3D; new URLSearchParams({
-            email: &#x27;sean@mail.com&#x27;
+            email: &#x27;sean@mail.com&#x27;,
+            platform: &#x27;twitter&#x27;,
+            maxLength: 15
         });
 
     const response = await fetch(`${API_URL}?${params}`, {

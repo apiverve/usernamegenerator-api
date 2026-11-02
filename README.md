@@ -31,7 +31,9 @@ The Username Generator API provides a simple, reliable way to integrate username
 async function callUsernameGeneratorAPI() {
     try {
         const params = new URLSearchParams({
-            email: 'sean@mail.com'
+            email: 'sean@mail.com',
+            platform: 'twitter',
+            maxLength: 15
         });
 
         const response = await fetch(`https://api.apiverve.com/v1/usernamegenerator?${params}`, {
@@ -54,7 +56,7 @@ callUsernameGeneratorAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/usernamegenerator?email=sean%40mail.com" \
+curl -X GET "https://api.apiverve.com/v1/usernamegenerator?email=sean%40mail.com&platform=twitter&maxLength=15" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -213,18 +215,20 @@ A real response from the Username Generator API:
   "data": {
     "count": 10,
     "suggestions": [
-      "doxologysean",
-      "sean",
-      "downpoursean",
-      "tonsilarsean",
-      "interdependencysean",
-      "seantrivant",
-      "seansquireen",
-      "seankillifish",
-      "seantiltyard",
-      "seaninterrupt"
+      "smoothsean",
+      "sean-blade",
+      "infinitesean",
+      "jadesean",
+      "sean777",
+      "hiddensean23",
+      "seantv596",
+      "sean_brightdragon",
+      "shiningsean",
+      "the_sean"
     ],
-    "email": "sean@mail.com"
+    "email": "sean@mail.com",
+    "platform": null,
+    "maxLength": null
   }
 }
 ```
