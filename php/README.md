@@ -29,7 +29,9 @@ $client = new Client('YOUR_API_KEY');
 // Make a request
 $response = $client->execute([
     'email' => 'sean@mail.com',
-    'count' => 1
+    'count' => 1,
+    'platform' => 'twitter',
+    'maxLength' => 15
 ]);
 
 // Print the response
@@ -45,7 +47,7 @@ use APIVerve\Usernamegenerator\Exceptions\APIException;
 use APIVerve\Usernamegenerator\Exceptions\ValidationException;
 
 try {
-    $response = $client->execute(['email' => 'sean@mail.com', 'count' => 1]);
+    $response = $client->execute(['email' => 'sean@mail.com', 'count' => 1, 'platform' => 'twitter', 'maxLength' => 15]);
     print_r($response['data']);
 } catch (ValidationException $e) {
     echo "Validation error: " . implode(', ', $e->getErrors());
@@ -74,18 +76,20 @@ $client = new Client(
   "data": {
     "count": 10,
     "suggestions": [
-      "doxologysean",
-      "sean",
-      "downpoursean",
-      "tonsilarsean",
-      "interdependencysean",
-      "seantrivant",
-      "seansquireen",
-      "seankillifish",
-      "seantiltyard",
-      "seaninterrupt"
+      "smoothsean",
+      "sean-blade",
+      "infinitesean",
+      "jadesean",
+      "sean777",
+      "hiddensean23",
+      "seantv596",
+      "sean_brightdragon",
+      "shiningsean",
+      "the_sean"
     ],
-    "email": "sean@mail.com"
+    "email": "sean@mail.com",
+    "platform": null,
+    "maxLength": null
   }
 }
 ```
