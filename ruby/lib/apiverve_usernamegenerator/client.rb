@@ -10,7 +10,7 @@ module APIVerve
     #
     # @example Basic usage
     #   client = APIVerve::Usernamegenerator::Client.new(api_key: "your_api_key")
-    #   response = client.execute({ email: "sean@mail.com", count: 1 })
+    #   response = client.execute({ email: "sean@mail.com", count: 1, platform: "twitter", maxLength: 15 })
     #   puts response
     #
     # @see https://apiverve.com/marketplace/usernamegenerator?utm_source=ruby&utm_medium=referral&utm_content=readme
@@ -19,7 +19,7 @@ module APIVerve
       DEFAULT_TIMEOUT = 30
 
       # Validation rules for parameters
-      VALIDATION_RULES = { 'email' => { type: 'string', required: true, format: 'email' }, 'count' => { type: 'integer', required: false, min: 1, max: 10 } }
+      VALIDATION_RULES = { 'email' => { type: 'string', required: true, format: 'email' }, 'count' => { type: 'integer', required: false, min: 1, max: 10 }, 'platform' => { type: 'string', required: false }, 'maxLength' => { type: 'integer', required: false, min: 3, max: 50 } }
 
       # Format validation patterns
       FORMAT_PATTERNS = {

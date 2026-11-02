@@ -37,7 +37,9 @@ client = APIVerve::Usernamegenerator::Client.new(api_key: "YOUR_API_KEY")
 # Make a request
 response = client.execute({
   email: "sean@mail.com",
-  count: 1
+  count: 1,
+  platform: "twitter",
+  maxLength: 15
 })
 
 # Print the response
@@ -49,7 +51,7 @@ puts response
 
 ```ruby
 begin
-  response = client.execute({ email: "sean@mail.com", count: 1 })
+  response = client.execute({ email: "sean@mail.com", count: 1, platform: "twitter", maxLength: 15 })
   puts response["data"]
 rescue APIVerve::Usernamegenerator::ValidationError => e
   puts "Validation error: #{e.errors.join(', ')}"
@@ -78,18 +80,20 @@ client = APIVerve::Usernamegenerator::Client.new(
   "data": {
     "count": 10,
     "suggestions": [
-      "doxologysean",
-      "sean",
-      "downpoursean",
-      "tonsilarsean",
-      "interdependencysean",
-      "seantrivant",
-      "seansquireen",
-      "seankillifish",
-      "seantiltyard",
-      "seaninterrupt"
+      "smoothsean",
+      "sean-blade",
+      "infinitesean",
+      "jadesean",
+      "sean777",
+      "hiddensean23",
+      "seantv596",
+      "sean_brightdragon",
+      "shiningsean",
+      "the_sean"
     ],
-    "email": "sean@mail.com"
+    "email": "sean@mail.com",
+    "platform": null,
+    "maxLength": null
   }
 }
 ```
