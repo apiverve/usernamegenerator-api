@@ -45,7 +45,9 @@ api = UsernamegeneratorAPIClient("[YOUR_API_KEY]")
 
 query = {
     "email": "sean@mail.com",
-    "count": 1
+    "count": 1,
+    "platform": "twitter",
+    "maxLength": 15
 }
 
 try:
@@ -86,7 +88,9 @@ Using the API client, you can perform requests to the API.
 ```python
 query = {
     "email": "sean@mail.com",
-    "count": 1
+    "count": 1,
+    "platform": "twitter",
+    "maxLength": 15
 }
 ```
 
@@ -109,18 +113,20 @@ print(result)
   "data": {
     "count": 10,
     "suggestions": [
-      "doxologysean",
-      "sean",
-      "downpoursean",
-      "tonsilarsean",
-      "interdependencysean",
-      "seantrivant",
-      "seansquireen",
-      "seankillifish",
-      "seantiltyard",
-      "seaninterrupt"
+      "smoothsean",
+      "sean-blade",
+      "infinitesean",
+      "jadesean",
+      "sean777",
+      "hiddensean23",
+      "seantv596",
+      "sean_brightdragon",
+      "shiningsean",
+      "the_sean"
     ],
-    "email": "sean@mail.com"
+    "email": "sean@mail.com",
+    "platform": null,
+    "maxLength": null
   }
 }
 ```
@@ -140,7 +146,9 @@ api = UsernamegeneratorAPIClient("[YOUR_API_KEY]")
 
 query = {
     "email": "sean@mail.com",
-    "count": 1
+    "count": 1,
+    "platform": "twitter",
+    "maxLength": 15
 }
 
 try:
@@ -164,7 +172,9 @@ api = UsernamegeneratorAPIClient("[YOUR_API_KEY]")
 
 query = {
     "email": "sean@mail.com",
-    "count": 1
+    "count": 1,
+    "platform": "twitter",
+    "maxLength": 15
 }
 
 try:
@@ -201,7 +211,9 @@ from apiverve_usernamegenerator.apiClient import UsernamegeneratorAPIClient, Use
 
 query = {
     "email": "sean@mail.com",
-    "count": 1
+    "count": 1,
+    "platform": "twitter",
+    "maxLength": 15
 }
 
 # Using context manager ensures proper cleanup
@@ -230,7 +242,9 @@ api = UsernamegeneratorAPIClient("[YOUR_API_KEY]", debug=True)
 
 query = {
     "email": "sean@mail.com",
-    "count": 1
+    "count": 1,
+    "platform": "twitter",
+    "maxLength": 15
 }
 
 # Debug information will be printed to console
@@ -248,7 +262,9 @@ api = UsernamegeneratorAPIClient("[YOUR_API_KEY]")
 
 query = {
     "email": "sean@mail.com",
-    "count": 1
+    "count": 1,
+    "platform": "twitter",
+    "maxLength": 15
 }
 
 try:

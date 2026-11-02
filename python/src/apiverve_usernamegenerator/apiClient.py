@@ -25,7 +25,9 @@ class UsernamegeneratorAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
         "email": {"type": "string", "required": True, "format": "email"},
-        "count": {"type": "integer", "required": False, "min": 1, "max": 10, "default": 1}
+        "count": {"type": "integer", "required": False, "min": 1, "max": 10, "default": 1},
+        "platform": {"type": "string", "required": False},
+        "maxLength": {"type": "integer", "required": False, "min": 3, "max": 50}
     }
 
     # Format validation patterns
