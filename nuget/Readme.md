@@ -61,7 +61,9 @@ class Program
 
         var queryOptions = new UsernameGeneratorQueryOptions {
             Email = "sean@mail.com",
-            Count = 1
+            Count = 1,
+            Platform = "twitter",
+            MaxLength = 15
         };
 
         // Make the API call
@@ -126,7 +128,9 @@ public class Example
 
         var queryOptions = new UsernameGeneratorQueryOptions {
             Email = "sean@mail.com",
-            Count = 1
+            Count = 1,
+            Platform = "twitter",
+            MaxLength = 15
         };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
@@ -159,7 +163,9 @@ public class Example
 
         var queryOptions = new UsernameGeneratorQueryOptions {
             Email = "sean@mail.com",
-            Count = 1
+            Count = 1,
+            Platform = "twitter",
+            MaxLength = 15
         };
 
         var response = apiClient.Execute(queryOptions);
@@ -197,7 +203,9 @@ public class Example
 
         var queryOptions = new UsernameGeneratorQueryOptions {
             Email = "sean@mail.com",
-            Count = 1
+            Count = 1,
+            Platform = "twitter",
+            MaxLength = 15
         };
 
         try
@@ -254,7 +262,9 @@ public class Example
 
         var queryOptions = new UsernameGeneratorQueryOptions {
             Email = "sean@mail.com",
-            Count = 1
+            Count = 1,
+            Platform = "twitter",
+            MaxLength = 15
         };
 
         try
@@ -296,7 +306,9 @@ apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
 var queryOptions = new UsernameGeneratorQueryOptions {
     Email = "sean@mail.com",
-    Count = 1
+    Count = 1,
+    Platform = "twitter",
+    MaxLength = 15
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -323,7 +335,9 @@ apiClient.SetLogger(message =>
 
 var queryOptions = new UsernameGeneratorQueryOptions {
     Email = "sean@mail.com",
-    Count = 1
+    Count = 1,
+    Platform = "twitter",
+    MaxLength = 15
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -342,7 +356,9 @@ apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (defau
 
 var queryOptions = new UsernameGeneratorQueryOptions {
     Email = "sean@mail.com",
-    Count = 1
+    Count = 1,
+    Platform = "twitter",
+    MaxLength = 15
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -355,7 +371,9 @@ The API client implements `IDisposable` for proper resource cleanup:
 ```csharp
 var queryOptions = new UsernameGeneratorQueryOptions {
     Email = "sean@mail.com",
-    Count = 1
+    Count = 1,
+    Platform = "twitter",
+    MaxLength = 15
 };
 
 using (var apiClient = new UsernameGeneratorAPIClient("[YOUR_API_KEY]"))
@@ -377,18 +395,20 @@ using (var apiClient = new UsernameGeneratorAPIClient("[YOUR_API_KEY]"))
   "data": {
     "count": 10,
     "suggestions": [
-      "doxologysean",
-      "sean",
-      "downpoursean",
-      "tonsilarsean",
-      "interdependencysean",
-      "seantrivant",
-      "seansquireen",
-      "seankillifish",
-      "seantiltyard",
-      "seaninterrupt"
+      "smoothsean",
+      "sean-blade",
+      "infinitesean",
+      "jadesean",
+      "sean777",
+      "hiddensean23",
+      "seantv596",
+      "sean_brightdragon",
+      "shiningsean",
+      "the_sean"
     ],
-    "email": "sean@mail.com"
+    "email": "sean@mail.com",
+    "platform": null,
+    "maxLength": null
   }
 }
 ```

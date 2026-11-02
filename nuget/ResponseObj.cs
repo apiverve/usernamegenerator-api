@@ -40,6 +40,12 @@ namespace APIVerve.API.UsernameGenerator
 
         [JsonProperty("email")]
         public string Email { get; set; }
+
+        [JsonProperty("platform")]
+        public object Platform { get; set; }
+
+        [JsonProperty("maxLength")]
+        public object MaxLength { get; set; }
     }
 
     public partial class Premium

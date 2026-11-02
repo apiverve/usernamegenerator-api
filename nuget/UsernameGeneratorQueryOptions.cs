@@ -21,5 +21,17 @@ namespace APIVerve.API.UsernameGenerator
         /// </summary>
         [JsonProperty("count")]
         public int? Count { get; set; }
+
+        /// <summary>
+        /// Only suggest handles this platform accepts (length and characters)
+        /// </summary>
+        [JsonProperty("platform")]
+        public string Platform { get; set; }
+
+        /// <summary>
+        /// Longest handle to suggest (3 to 50); combined with platform, the shorter limit wins
+        /// </summary>
+        [JsonProperty("maxLength")]
+        public int? MaxLength { get; set; }
     }
 }
